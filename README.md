@@ -1,62 +1,86 @@
-# AI-Powered Customer Intelligence & Revenue Optimization System
+# 📊 Customer Intelligence & RFM Segmentation
 
-## Tech Stack
+## 🚀 Project Overview
+This project focuses on customer intelligence using **RFM (Recency, Frequency, Monetary)** analysis to segment customers based on purchasing behavior.
 
+The objective is to derive actionable business insights that improve:
+- Customer retention
+- Targeted marketing
+- Revenue optimization
+
+---
+
+## 🎯 Problem Statement
+Businesses often struggle to:
+- Identify high-value customers
+- Detect churn-risk customers
+- Personalize campaigns
+- Optimize retention strategies
+
+This project solves these using structured behavioral segmentation.
+
+---
+
+## 🛠️ Tech Stack
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- Scikit-learn (planned)
 - Jupyter Notebook
+- Git & GitHub
 
 ---
 
-## Project Structure
-1. Project Objective
+## 📂 Project Structure
+customer-intelligence-segmentation/
+│
+├── data/
+│ └── Online Retail.xlsx
+│
+├── notebooks/
+│ └── 01_EDA.ipynb
+│
+├── README.md
+└── .gitignore
 
-The objective of this project is to build an end-to-end customer intelligence system using retail transaction data to:
 
-- Perform customer segmentation
-- Analyze revenue behavior
-- Prepare for churn modeling
-- Enable revenue optimization strategies
+---
 
-2. Dataset Overview
+## 🔎 Exploratory Data Analysis (EDA)
 
-- Dataset: Online Retail Transaction Data
-- Source: UCI Machine Learning Repository
-- Initial Rows: 541,909
-- Columns: 8
-- Unique Customers: 4,372
-- Granularity: Transaction-level (each row represents one product in an invoice)
+### ✔ Performed:
+- Data cleaning (handling nulls, negative quantities)
+- Duplicate removal
+- Revenue calculation
+- Country-wise sales analysis
+- Transaction behavior analysis
 
-3. Initial Data Observations
-Missing Values
-- Description: 1,454 missing
-- CustomerID: 135,080 missing (~25%)
-CustomerID is critical for customer-level analysis.
+### 📌 Key Findings:
+- Presence of canceled orders (negative quantity)
+- Revenue concentration in specific regions
+- Customer purchase frequency patterns
 
-Negative Quantities
-- 3,836 cancelled invoices (InvoiceNo starting with "C")
-- 1,336 rows had negative quantities without cancellation prefix
-- These rows lacked CustomerID, Description, and UnitPrice
-- Likely system adjustments or corrupted entries
+---
 
-4. Data Cleaning Decisions
-To prepare data for customer intelligence modeling:
-- Removed rows with missing CustomerID
-    Required for segmentation and churn modeling
-- Removed rows with Quantity ≤ 0
-    Represent returns, cancellations, or system adjustments
+## 📈 Next Phase: RFM Segmentation
+- Calculate Recency, Frequency, Monetary values
+- Assign RFM scores
+- Segment customers (Champions, Loyal, At Risk, etc.)
+- Provide business recommendations
 
-After cleaning:
-- Final Rows: 397,924
+---
 
-5. Feature Engineering
-Created new feature:
-TotalPrice = Quantity × UnitPrice
-This represents revenue per transaction and is critical for:
-- RFM analysis
-- Revenue optimization
-- Customer segmentation
+## 📊 Business Impact
+RFM segmentation enables:
+- Targeted marketing campaigns
+- Customer retention strategies
+- Revenue growth optimization
+- Identification of high lifetime value customers
+
+---
+
+## 👩‍💻 Author
+**Madugula Harika**  
+AIML Graduate | Aspiring Data Scientist | MS Data Science Applicant
+
